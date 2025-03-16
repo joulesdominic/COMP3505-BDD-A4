@@ -26,7 +26,8 @@ Feature: Test Petstore Login
     Then I should be able to login successfully
 
     Examples: 
-      | username| password    |
-      | j2ee | j2ee |
-      | quality1| 12345678 |
-      | quality2| 12345678 |
+      | username  |password|
+      | j2ee      |j2ee|
+      | quality1  |12345678|
+      | quality2  |12345678|
+
