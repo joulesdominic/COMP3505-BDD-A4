@@ -10,9 +10,9 @@ Feature: Test Change Password Feature
     And I submit the password change form
     Then I should be directed back to main page
     When I logout
-    Then I should see the Sign In button again
+    Then I should see the Sign In button again for password
     And I should be able to login with "<username>" and "<newpassword>"
 
     Examples: 
       | username  | password | newpassword |
-      | bubs      | pw  | newpw    |
+      | bubs      | newpw  | pw    |

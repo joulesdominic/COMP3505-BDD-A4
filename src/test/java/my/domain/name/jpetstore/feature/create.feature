@@ -27,7 +27,7 @@ Feature: Test Pet Store Account Registration
 
     Examples: 
       | userID| password    | firstname | lastname | email | phone | address1 | city | state | zip | country | 
-			| user123 | Pass@123  | John      | Doe      | john.doe@example.com  | 4031234567  | 123 Main St    | Calgary | Alberta | T2P1B1 | Canada  |
+			| googlie | Pass@123  | John      | Doe      | john.doe@example.com  | 4031234567  | 123 Main St    | Calgary | Alberta | T2P1B1 | Canada  |
 			
 	Scenario Outline: Test invalid Pet Store Account Registration 
     Given I open Chrome browser
