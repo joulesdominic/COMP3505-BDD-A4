@@ -27,7 +27,19 @@ Feature: Test Petstore Login
 
     Examples: 
       | username  |password|
-      | j2ee      |j2ee|
+      | j2ee      |j2ee    |
       | quality1  |12345678|
       | quality2  |12345678|
+      
+  Scenario Outline: Test Invalid Pet Store login
+  	Given I open Chrome browser
+  	And I go to Pet Store Login page
+  		When I enter invalid "<username>" and "<password>" combination
+  	Then I should see an error message
+
+  	Examples:
+    	| username  |password |
+    	| invalid   |invalid  |
+    	| j2ee      |wrongpass|
+    	| wronguser |j2ee     |
 
