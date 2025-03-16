@@ -22,10 +22,10 @@ Feature: Test Petstore Login
   Scenario Outline: Test Valid Pet Store login
     Given I open Chrome browser
     And I go to Pet Store Login page
-    	When I enter valid "<username>" and "<password>" combination
+   	When I enter valid "<username>" and "<password>" combination
     Then I should be able to login successfully
 
-    Examples: 
+  Examples: 
       | username  |password|
       | j2ee      |j2ee    |
       | quality1  |12345678|
@@ -34,7 +34,7 @@ Feature: Test Petstore Login
   Scenario Outline: Test Invalid Pet Store login
   	Given I open Chrome browser
   	And I go to Pet Store Login page
-  		When I enter invalid "<username>" and "<password>" combination
+ 		When I enter invalid "<username>" and "<password>" combination
   	Then I should see an error message
 
   	Examples:

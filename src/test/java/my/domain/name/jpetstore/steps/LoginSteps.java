@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -17,7 +18,7 @@ public class LoginSteps {
 	WebDriver driver;
 
 	@Given("^I open Chrome browser$")
-	public void i_open_Chrome_browser() throws Throwable {
+	public void i_open_Chrome_browser_for_login() throws Throwable {
 	 System.setProperty("webdriver.chrome.driver", "chrome/chromedriver.exe");
 	 driver = new ChromeDriver();
 	 driver.manage().window().maximize();

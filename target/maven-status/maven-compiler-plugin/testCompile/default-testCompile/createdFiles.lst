@@ -1,0 +1,4 @@
+my\domain\name\jpetstore\steps\CreateAccountSteps.class
+my\domain\name\jpetstore\AppTest.class
+my\domain\name\jpetstore\TestRunner.class
+my\domain\name\jpetstore\steps\LoginSteps.class

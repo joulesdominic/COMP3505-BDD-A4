@@ -8,16 +8,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class CreateAccountSteps {
     WebDriver driver;
 
-    @Given("^I open Chrome browser$")
-    public void i_open_chrome_browser() {
-        System.setProperty("webdriver.chrome.driver", "chrome/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
+    @Given("^I open Chrome browser with no account$")
+    public void i_open_chrome_browser_with_no_account() {
+    	System.setProperty("webdriver.chrome.driver", "chrome/chromedriver.exe");
+   	 driver = new ChromeDriver();
+   	 driver.manage().window().maximize();
     }
 
     @Given("I go to Pet Store Create an Account Page")
@@ -51,6 +53,19 @@ public class CreateAccountSteps {
         try {
             WebElement errorMessage = driver.findElement(By.className("messages"));
             assertTrue(errorMessage.isDisplayed());
+        } catch (Exception e) {
+            fail();
+        } finally {
+            driver.quit();
+        }
+    }
+    
+    @Then("I should see a message indicating missing required fields")
+    public void i_should_see_a_missing_required_fields_message() {
+        try {
+            WebElement errorMessage = driver.findElement(By.xpath("//ul[@class='messages']/li"));
+            assertTrue(errorMessage.isDisplayed());
+            assertTrue(errorMessage.getText().contains("One or more required filed does not have a value."));
         } catch (Exception e) {
             fail();
         } finally {

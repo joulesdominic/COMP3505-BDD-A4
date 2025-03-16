@@ -1,46 +1,44 @@
 -------------------------------------------------------------------------------
 Test set: my.domain.name.jpetstore.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.133 s <<< FAILURE! -- in my.domain.name.jpetstore.TestRunner
-Test Pet Store Account Registration.Test valid Pet Store Account Registration #1 -- Time elapsed: 0.047 s <<< ERROR!
-io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in my.domain.name.jpetstore.steps.CreateAccountSteps.i_open_chrome_browser() and my.domain.name.jpetstore.steps.LoginSteps.i_open_Chrome_browser()
-	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+Tests run: 19, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 36.81 s <<< FAILURE! -- in my.domain.name.jpetstore.TestRunner
+Test Pet Store Account Registration.Test valid Pet Store Account Registration #1 -- Time elapsed: 2.503 s <<< FAILURE!
+java.lang.AssertionError
+	at my.domain.name.jpetstore.steps.CreateAccountSteps.my_account_is_created(CreateAccountSteps.java:38)
+	at ✽.My account is made with the appropriate information assigned to it(classpath:my/domain/name/jpetstore/feature/CreateAccount.feature:26)
 
-my.domain.name.jpetstore.TestRunner -- Time elapsed: 0.133 s <<< ERROR!
-io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in my.domain.name.jpetstore.steps.CreateAccountSteps.i_open_chrome_browser() and my.domain.name.jpetstore.steps.LoginSteps.i_open_Chrome_browser()
-	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
-	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
-	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
-	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
-	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
-	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
-	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
-	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
-	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
+Test Pet Store Account Registration.Test valid Pet Store Account Registration #2 -- Time elapsed: 2.084 s <<< FAILURE!
+java.lang.AssertionError
+	at my.domain.name.jpetstore.steps.CreateAccountSteps.my_account_is_created(CreateAccountSteps.java:38)
+	at ✽.My account is made with the appropriate information assigned to it(classpath:my/domain/name/jpetstore/feature/CreateAccount.feature:26)
+
+Test Pet Store Account Registration.Test invalid Pet Store Account Username/Password Registration #1 -- Time elapsed: 2.074 s <<< FAILURE!
+java.lang.AssertionError
+	at my.domain.name.jpetstore.steps.CreateAccountSteps.i_should_see_an_error_message(CreateAccountSteps.java:57)
+	at ✽.I should see an error message indicating invalid input(classpath:my/domain/name/jpetstore/feature/CreateAccount.feature:37)
+
+Test Pet Store Account Registration.Test invalid Pet Store Account Username/Password Registration #2 -- Time elapsed: 2.067 s <<< FAILURE!
+java.lang.AssertionError
+	at my.domain.name.jpetstore.steps.CreateAccountSteps.i_should_see_an_error_message(CreateAccountSteps.java:57)
+	at ✽.I should see an error message indicating invalid input(classpath:my/domain/name/jpetstore/feature/CreateAccount.feature:37)
+
+Test Pet Store Account Registration.Test invalid Pet Store Account Information Registration #3 -- Time elapsed: 2.083 s <<< FAILURE!
+java.lang.AssertionError
+	at my.domain.name.jpetstore.steps.CreateAccountSteps.i_should_see_a_missing_required_fields_message(CreateAccountSteps.java:70)
+	at ✽.I should see a message indicating missing required fields(classpath:my/domain/name/jpetstore/feature/CreateAccount.feature:49)
+
+Test Pet Store Account Registration.Test invalid Pet Store Account Information Registration #4 -- Time elapsed: 2.104 s <<< FAILURE!
+java.lang.AssertionError
+	at my.domain.name.jpetstore.steps.CreateAccountSteps.i_should_see_a_missing_required_fields_message(CreateAccountSteps.java:70)
+	at ✽.I should see a message indicating missing required fields(classpath:my/domain/name/jpetstore/feature/CreateAccount.feature:49)
+
+Test Pet Store Account Registration.Test invalid Pet Store Account Information Registration #7 -- Time elapsed: 2.053 s <<< FAILURE!
+java.lang.AssertionError
+	at my.domain.name.jpetstore.steps.CreateAccountSteps.i_should_see_a_missing_required_fields_message(CreateAccountSteps.java:70)
+	at ✽.I should see a message indicating missing required fields(classpath:my/domain/name/jpetstore/feature/CreateAccount.feature:49)
+
+Test Pet Store Account Registration.Test invalid Pet Store Account Information Registration #9 -- Time elapsed: 2.099 s <<< FAILURE!
+java.lang.AssertionError
+	at my.domain.name.jpetstore.steps.CreateAccountSteps.i_should_see_a_missing_required_fields_message(CreateAccountSteps.java:70)
+	at ✽.I should see a message indicating missing required fields(classpath:my/domain/name/jpetstore/feature/CreateAccount.feature:49)
 
