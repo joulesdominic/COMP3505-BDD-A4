@@ -9,8 +9,10 @@ Feature: Test Change Password Feature
     And I confirm "<newpassword>" in the repeat password field
     And I submit the password change form
     Then I should be directed back to main page
-    #And I should be able to login with "<username>" and "<newpassword>"
+    When I logout
+    Then I should see the Sign In button again
+    And I should be able to login with "<username>" and "<newpassword>"
 
     Examples: 
       | username  | password | newpassword |
-      | bubs      | love  | newlove    |
+      | bubs      | pw  | newpw    |
