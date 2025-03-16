@@ -30,7 +30,9 @@ public class LoginSteps {
 	public void i_enter_valid_and_combination(String string, String string2) throws Throwable{
 		driver.findElement(By.name("username")).sendKeys(string);
 		Thread.sleep(5000);
-		driver.findElement(By.name("password")).sendKeys(string2);
+		WebElement passwordField = driver.findElement(By.name("password"));
+		passwordField.clear();
+		passwordField.sendKeys(string2);
 		Thread.sleep(5000);
 		driver.findElement(By.cssSelector("input[type='submit'][value='Login']")).click();
 		Thread.sleep(5000);
