@@ -1,0 +1,85 @@
+-------------------------------------------------------------------------------
+Test set: my.domain.name.jpetstore.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.147 s <<< FAILURE! -- in my.domain.name.jpetstore.TestRunner
+Test Petstore Login.Test Valid Pet Store login #1 -- Time elapsed: 0.076 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'I open Chrome browser' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("I open Chrome browser")
+public void i_open_chrome_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("I go to Pet Store Login page")
+public void i_go_to_pet_store_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I enter valid {string} and {string} combination")
+public void i_enter_valid_and_combination(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I should be able to login successfully")
+public void i_should_be_able_to_login_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Test Petstore Login.Test Valid Pet Store login #2 -- Time elapsed: 0.004 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'I open Chrome browser' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("I open Chrome browser")
+public void i_open_chrome_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("I go to Pet Store Login page")
+public void i_go_to_pet_store_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I enter valid {string} and {string} combination")
+public void i_enter_valid_and_combination(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I should be able to login successfully")
+public void i_should_be_able_to_login_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Test Petstore Login.Test Valid Pet Store login #3 -- Time elapsed: 0.004 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'I open Chrome browser' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("I open Chrome browser")
+public void i_open_chrome_browser() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("I go to Pet Store Login page")
+public void i_go_to_pet_store_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("I enter valid {string} and {string} combination")
+public void i_enter_valid_and_combination(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("I should be able to login successfully")
+public void i_should_be_able_to_login_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
