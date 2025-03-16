@@ -1,85 +1,46 @@
 -------------------------------------------------------------------------------
 Test set: my.domain.name.jpetstore.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.147 s <<< FAILURE! -- in my.domain.name.jpetstore.TestRunner
-Test Petstore Login.Test Valid Pet Store login #1 -- Time elapsed: 0.076 s <<< ERROR!
-io.cucumber.junit.UndefinedStepException: 
-The step 'I open Chrome browser' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.133 s <<< FAILURE! -- in my.domain.name.jpetstore.TestRunner
+Test Pet Store Account Registration.Test valid Pet Store Account Registration #1 -- Time elapsed: 0.047 s <<< ERROR!
+io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in my.domain.name.jpetstore.steps.CreateAccountSteps.i_open_chrome_browser() and my.domain.name.jpetstore.steps.LoginSteps.i_open_Chrome_browser()
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
 
-@Given("I open Chrome browser")
-public void i_open_chrome_browser() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("I go to Pet Store Login page")
-public void i_go_to_pet_store_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("I enter valid {string} and {string} combination")
-public void i_enter_valid_and_combination(String string, String string2) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("I should be able to login successfully")
-public void i_should_be_able_to_login_successfully() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-
-Test Petstore Login.Test Valid Pet Store login #2 -- Time elapsed: 0.004 s <<< ERROR!
-io.cucumber.junit.UndefinedStepException: 
-The step 'I open Chrome browser' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("I open Chrome browser")
-public void i_open_chrome_browser() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("I go to Pet Store Login page")
-public void i_go_to_pet_store_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("I enter valid {string} and {string} combination")
-public void i_enter_valid_and_combination(String string, String string2) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("I should be able to login successfully")
-public void i_should_be_able_to_login_successfully() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-
-Test Petstore Login.Test Valid Pet Store login #3 -- Time elapsed: 0.004 s <<< ERROR!
-io.cucumber.junit.UndefinedStepException: 
-The step 'I open Chrome browser' and 3 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given("I open Chrome browser")
-public void i_open_chrome_browser() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Given("I go to Pet Store Login page")
-public void i_go_to_pet_store_login_page() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When("I enter valid {string} and {string} combination")
-public void i_enter_valid_and_combination(String string, String string2) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then("I should be able to login successfully")
-public void i_should_be_able_to_login_successfully() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
+my.domain.name.jpetstore.TestRunner -- Time elapsed: 0.133 s <<< ERROR!
+io.cucumber.core.runner.DuplicateStepDefinitionException: Duplicate step definitions in my.domain.name.jpetstore.steps.CreateAccountSteps.i_open_chrome_browser() and my.domain.name.jpetstore.steps.LoginSteps.i_open_Chrome_browser()
+	at io.cucumber.core.runner.CachingGlue.lambda$prepareGlue$3(CachingGlue.java:278)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at io.cucumber.core.runner.CachingGlue.prepareGlue(CachingGlue.java:272)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:72)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.lambda$run$0(PickleRunners.java:151)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.junit.PickleRunners$NoStepDescriptions.run(PickleRunners.java:148)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)
+	at io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)
+	at io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:196)
+	at io.cucumber.junit.Cucumber.runChild(Cucumber.java:89)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runFeatures$6(CucumberExecutionContext.java:148)
+	at io.cucumber.core.runtime.CucumberExecutionContext.execute(CucumberExecutionContext.java:163)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runFeatures(CucumberExecutionContext.java:146)
+	at io.cucumber.junit.Cucumber$StartAndFinishTestRun.evaluate(Cucumber.java:226)
 
