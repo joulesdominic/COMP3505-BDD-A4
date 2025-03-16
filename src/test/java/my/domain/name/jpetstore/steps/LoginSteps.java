@@ -50,6 +50,7 @@ public class LoginSteps {
 		}
 
 	}
+	
 	@Then("I should see an error message")
 	public void i_should_see_an_error_message() throws Throwable{
 		try {
@@ -60,10 +61,34 @@ public class LoginSteps {
             assertTrue("Error message is not displayed or incorrect", 
                        errorMessage.isDisplayed() && actualErrorMessage.equals(expectedErrorMessage));
         } catch (Exception e) {
-            fail("Error message not displayed or incorrect: " + e.getMessage());
+            fail();
         } finally {
             driver.quit();
         }
+	}
+	
+	@When("I logout")
+	public void i_logout() throws Throwable{
+		try {
+            WebElement signOutLink = driver.findElement(By.cssSelector("div#MenuContent a[href*='signoff=']"));
+            signOutLink.click();
+            Thread.sleep(1000);
+        } catch (Exception e) {
+            fail();
+        }
+	}
+	
+	@Then("I should see the Sign In button again")
+	public void i_should_see_the_sign_in_button_again() throws Throwable{
+	    try {
+	    	WebElement signInButton = driver.findElement(By.cssSelector("div#MenuContent a[href*='signonForm=']"));
+		    assertTrue(signInButton.isDisplayed());
+	    } catch (Exception e) {
+	    	fail();
+	    }
+	    finally {
+	    	driver.quit();
+	    }
 	}
 	
 	private void enterCredentials(String username, String password) throws Throwable{

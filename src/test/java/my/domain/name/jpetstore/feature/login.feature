@@ -21,8 +21,8 @@ Feature: Test Petstore Login
  
   Scenario Outline: Test Valid Pet Store login
     Given I open Chrome browser
-    And I go to Pet Store Login page
-    	When I enter valid "<username>" and "<password>" combination
+    	And I go to Pet Store Login page
+    When I enter valid "<username>" and "<password>" combination
     Then I should be able to login successfully
 
     Examples: 
@@ -33,8 +33,8 @@ Feature: Test Petstore Login
       
   Scenario Outline: Test Invalid Pet Store login
   	Given I open Chrome browser
-  	And I go to Pet Store Login page
-  		When I enter invalid "<username>" and "<password>" combination
+  		And I go to Pet Store Login page
+  	When I enter invalid "<username>" and "<password>" combination
   	Then I should see an error message
 
   	Examples:
@@ -42,4 +42,14 @@ Feature: Test Petstore Login
     	| invalid   |invalid  |
     	| j2ee      |wrongpass|
     	| wronguser |j2ee     |
+  Scenario Outline: Test Logout Functionality
+  	Given I open Chrome browser
+  		And I go to Pet Store Login page
+  	When I enter valid "<username>" and "<password>" combination
+  		And I logout
+  	Then I should see the Sign In button again
+  	
+  	Examples:
+  	  | username  |password|
+      | j2ee      |j2ee    |
 
